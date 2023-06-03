@@ -11,16 +11,16 @@ jupyter lab --port=8888 --ip=0.0.0.0 --allow-root
 ```
 
 ## 資料
-`private_test_data.jsonl` 原始 private_test 資料
-`public_test.jsonl` 原始 public_test 資料
-`public_train_0316.jsonl`  原始 public_train_0316 資料
-`public_train_0522.jsonl` 原始 public_train_0522 資料
-`merged.jsonl` 刪除 claim 中的空白訓練資料
-`public_train.jsonl` 刪除空白、處理衝突 label、利用 claim 合併證據的資料
-`public_test_data.jsonl` 刪除 claim 中的空白資料
+- `private_test_data.jsonl` 原始 private_test 資料
+- `public_test.jsonl` 原始 public_test 資料
+- `public_train_0316.jsonl`  原始 public_train_0316 資料
+- `public_train_0522.jsonl` 原始 public_train_0522 資料
+- `merged.jsonl` 刪除 claim 中的空白訓練資料
+- `public_train.jsonl` 刪除空白、處理衝突 label、利用 claim 合併證據的資料
+- `public_test_data.jsonl` 刪除 claim 中的空白資料
 
 處理程式碼
-preprocess.ipynb
+- `preprocess.ipynb` 在資料的後三筆是由此程式碼產生而來
 
 ## 訓練程式碼
 `main.ipynb` 由比賽 baseline 程式碼修改而來，主要使用 hanlp +  chinese-lert-base，模型訓練皆使用 autogluon 來輔助訓練過程
@@ -37,6 +37,7 @@ preprocess.ipynb
 
 |                  Model Type                   | Public Score | Private Score |                                               URL                                                |
 | :-------------------------------------------: | :----------: | :-----------: | :----------------------------------------------------------------------------------------------: |
-| hanlp + chinese-lert-base + chinese-lert-base |   0.592518   |   0.678255    | [Download](https://drive.google.com/drive/folders/1-4sLL-tQtZC1QEXegeoR3c6Qi3GRvkjM?usp=sharing) |
+| hanlp + chinese-lert-base * 2 |   0.592518   |   0.678255    | [Download](https://drive.google.com/drive/folders/1-4sLL-tQtZC1QEXegeoR3c6Qi3GRvkjM?usp=sharing) |
 
 - 因為實驗室電腦被攻擊資料被刪除，這是在比賽最後一周訓練的權重，並且只保留最佳模型
+- 所有權重的訓練參數與設定都在此資料夾中 assets.json、config.yaml 檔案，大多數參數都使用Autogluon預設參數
