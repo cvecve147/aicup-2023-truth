@@ -27,7 +27,7 @@ preprocess.ipynb
 - 執行前需要先將wiki-pages放入Data中
 
 ## 預測
-`Test.ipynb` 由比賽 baseline 程式碼修改而來，主要使用 hanlp +  chinese-lert-base
+`test.ipynb` 由比賽 baseline 程式碼修改而來，主要使用 hanlp +  chinese-lert-base
 - 設定載入模型，修改這兩變數將權重下載下來後載入模型路徑
     - `step2_model = 'step2_new_upload'` 
     - `step3_model = 'step3_new_upload'`
