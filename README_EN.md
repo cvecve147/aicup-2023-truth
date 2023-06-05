@@ -47,6 +47,22 @@ Data Processing Code:
     - `step2_model = 'step2_new_upload'` 
     - `step3_model = 'step3_new_upload'`
 
+## Step 1 Document Retrieval
+| Model                    | Precision | Recall |
+| ------------------------ | --------- | ------ |
+| MSR_TOK_ELECTRA_BASE_CRF | 0.2328    | 0.8611 |
+
+
+## Step 2 Sentence Retrieval
+| Model             | Precision | Recall | F1 Score |
+| ----------------- | --------- | ------ | -------- |
+| chinese-lert-base | 0.2598    | 0.7916 | 0.3912   |
+
+## Step 3 Claim Validation
+| Model             | Validation |
+| ----------------- | ---------- |
+| chinese-lert-base | 0.7630     |
+
 ## Model Weights
 
 |          Model Type           | Public Score | Private Score |                                               URL                                                |

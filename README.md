@@ -47,10 +47,28 @@ pip install -r requirements.txt
   - `step2_model = 'step2_new_upload'`
   - `step3_model = 'step3_new_upload'`
 
+
+## Step 1 Document Retrieval
+| Model                    | Precision | Recall |
+| ------------------------ | --------- | ------ |
+| MSR_TOK_ELECTRA_BASE_CRF | 0.2328    | 0.8611 |
+
+
+## Step 2 Sentence Retrieval
+| Model             | Precision | Recall | F1 Score |
+| ----------------- | --------- | ------ | -------- |
+| chinese-lert-base | 0.2598    | 0.7916 | 0.3912   |
+
+## Step 3 Claim Validation
+| Model             | Validation |
+| ----------------- | ---------- |
+| chinese-lert-base | 0.7630     |
+
+
 ## 模型權重
-| Model Type | Public Score | Private Score | URL |
-|---|---|---|---|
-| hanlp + chinese-lert-base * 2 | 0.592518 | 0.678255 | [Download](https://drive.google.com/drive/folders/1-4sLL-tQtZC1QEXegeoR3c6Qi3GRvkjM?usp=sharing) |
+| Model Type                    | Public Score | Private Score | URL                                                                                              |
+| ----------------------------- | ------------ | ------------- | ------------------------------------------------------------------------------------------------ |
+| hanlp + chinese-lert-base * 2 | 0.592518     | 0.678255      | [Download](https://drive.google.com/drive/folders/1-4sLL-tQtZC1QEXegeoR3c6Qi3GRvkjM?usp=sharing) |
 
 - 由於實驗室電腦被攻擊，資料被刪除，這是在比賽最後一週訓練的權重，且僅保留最佳模型。
 - 所有權重的訓練參數和設定都在該權重目錄的 assets.json 和 config.yaml 檔案中，大部分參數使用 Autogluon 預設參數。
